@@ -1,0 +1,22 @@
+{
+    "name": "mensbeam/magic-properties",
+    "description": "Getter and setter method trait for PHP",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MensBeam\\Foundation\\": "lib/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dustin Wilson",
+            "email": "dustin@dustinwilson.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "nikic/php-parser": "^4.15"
+    }
+}
