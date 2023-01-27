@@ -1,5 +1,5 @@
 {
-    "name": "mensbeam/magic-properties",
+    "name": "mensbeam/getters-and-setters",
     "description": "Getter and setter method trait for PHP",
     "type": "library",
     "license": "MIT",
