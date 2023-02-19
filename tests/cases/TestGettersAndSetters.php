@@ -6,11 +6,11 @@
  */
 
 declare(strict_types=1);
-namespace MensBeam\Foundation\TestCase;
-use MensBeam\Foundation\GettersAndSetters;
+namespace MensBeam\GettersAndSetters\TestCase;
+use MensBeam\GettersAndSetters;
 
 
-/** @covers \MensBeam\Foundation\GettersAndSetters */
+/** @covers \MensBeam\GettersAndSetters */
 class TestGettersAndSetters extends \PHPUnit\Framework\TestCase {
     public function provideFailures__errors(): iterable {
         $ook = new class {
@@ -45,9 +45,9 @@ class TestGettersAndSetters extends \PHPUnit\Framework\TestCase {
 
     /**
      * @dataProvider provideFailures__errors
-     * @covers \MensBeam\Foundation\GettersAndSetters::__get
-     * @covers \MensBeam\Foundation\GettersAndSetters::__set
-     * @covers \MensBeam\Foundation\GettersAndSetters::__unset
+     * @covers \MensBeam\GettersAndSetters::__get
+     * @covers \MensBeam\GettersAndSetters::__set
+     * @covers \MensBeam\GettersAndSetters::__unset
      */
     public function testFailures__errors(\Closure $closure): void {
         $this->expectException(\Error::class);
@@ -88,9 +88,9 @@ class TestGettersAndSetters extends \PHPUnit\Framework\TestCase {
 
     /**
      * @dataProvider provideFailures__warnings
-     * @covers \MensBeam\Foundation\GettersAndSetters::__get
-     * @covers \MensBeam\Foundation\GettersAndSetters::__set
-     * @covers \MensBeam\Foundation\GettersAndSetters::__unset
+     * @covers \MensBeam\GettersAndSetters::__get
+     * @covers \MensBeam\GettersAndSetters::__set
+     * @covers \MensBeam\GettersAndSetters::__unset
      */
     public function testFailures__warnings(\Closure $closure): void {
         $this->expectWarning();
@@ -98,7 +98,7 @@ class TestGettersAndSetters extends \PHPUnit\Framework\TestCase {
     }
 
 
-    /** @covers \MensBeam\Foundation\GettersAndSetters::__isset */
+    /** @covers \MensBeam\GettersAndSetters::__isset */
     public function testIsset(): void {
         $ook = new class {
             use GettersAndSetters;
@@ -112,7 +112,7 @@ class TestGettersAndSetters extends \PHPUnit\Framework\TestCase {
     }
 
 
-    /** @covers \MensBeam\Foundation\GettersAndSetters::__unset */
+    /** @covers \MensBeam\GettersAndSetters::__unset */
     public function testUnset(): void {
         $ook = new class {
             use GettersAndSetters;
@@ -133,7 +133,7 @@ class TestGettersAndSetters extends \PHPUnit\Framework\TestCase {
     }
 
 
-    /** @covers \MensBeam\Foundation\GettersAndSetters::__set */
+    /** @covers \MensBeam\GettersAndSetters::__set */
     public function testSet(): void {
         $ook = new class {
             use GettersAndSetters;
